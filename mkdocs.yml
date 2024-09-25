@@ -1,0 +1,117 @@
+site_name: SRI
+
+#nav:
+#    - Inicio: index.md
+#    - Introducción: 00_introduccion.md
+#    - Instalación: 01_instalacion.md
+#    - Conceptos Clave: 
+#        - Conceptos Clave: 02_conceptos_clave.md
+#        - Imágenes: docker/imagenes.md
+#        - Contenedores: docker/contenedores.md
+#        - Volúmenes: docker/volumenes.md
+#        - Redes: docker/redes.md 
+#    - About:
+#        - License: license.md
+#        - Release Notes: release-notes.md
+nav:
+  - ./index.md
+  - 01.-DHCP:
+    - ./01.-DHCP/index.md
+    - 01.-History: ./01.-DHCP/01.-History.md
+    - 02.-Overview:
+      - ./01.-DHCP/02.-Overview/index.md
+      - 01.-How DHCP Works: ./01.-DHCP/02.-Overview/01.-How DHCP Works.md
+      - 02.-IP Address Allocation Methods: ./01.-DHCP/02.-Overview/02.-IP Address Allocation Methods.md
+      - 03.-Additional Notes: ./01.-DHCP/02.-Overview/03.-Additional Notes.md
+    - 03.-Operation Process:
+      - ./01.-DHCP/03.-Operation Process/index.md
+      - 01.-Discovery: ./01.-DHCP/03.-Operation Process/01.-Discovery.md
+      - 02.-Offer: ./01.-DHCP/03.-Operation Process/02.-Offer.md
+      - 03.-Request: ./01.-DHCP/03.-Operation Process/03.-Request.md
+      - 04.-Acknowledgement: ./01.-DHCP/03.-Operation Process/04.-Acknowledgement.md
+      - 05.-Additional Steps: ./01.-DHCP/03.-Operation Process/05.-Additional Steps.md
+    - 04.-Client configuration parameters: ./01.-DHCP/04.-Client configuration parameters.md
+    - 05.-DHCP Options:
+      - ./01.-DHCP/05.-DHCP Options/index.md
+      - 01.-Main Categories of DHCP Options: ./01.-DHCP/05.-DHCP Options/01.-Main Categories of DHCP Options.md
+      - 02.-Important DHCP Extensions: ./01.-DHCP/05.-DHCP Options/02.-Important DHCP Extensions.md
+      - 03.-DHCP Message Types: ./01.-DHCP/05.-DHCP Options/03.-DHCP Message Types.md
+      - 04.-Client Vendor Identification: ./01.-DHCP/05.-DHCP Options/04.-Client Vendor Identification.md
+      - 05.-Other Relevant Extensions: ./01.-DHCP/05.-DHCP Options/05.-Other Relevant Extensions.md
+    - 06.-Relaying:
+      - 01.-DHCP Relay Process: ./01.-DHCP/06.-Relaying/01.-DHCP Relay Process.md
+      - 02.-Special Considerations: ./01.-DHCP/06.-Relaying/02.-Special Considerations.md
+      - 04.-Benefits: ./01.-DHCP/06.-Relaying/04.-Benefits.md
+      - 08.-Client states: ./01.-DHCP/06.-Relaying/08.-Client states.md
+      - Index: ./01.-DHCP/06.-Relaying/Index.md
+
+theme:
+    features:
+        - navigation.top
+        - navigation.top.sticky
+        - navigation.tabs
+        - navigation.indexes
+
+    language : es
+
+    name: 'dracula'
+    palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+# gigante
+      primary: blue grey
+      accent: green
+
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - footnotes
+  # - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  # - pymdownx.superfences
+  # - pymdownx.details
+  # - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - roamlinks
+  - mermaid2
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+extra:
+  static:
+    - carpe
